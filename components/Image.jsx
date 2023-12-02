@@ -14,7 +14,7 @@ const Image = (props) => {
     slideInTop: animation.includes('slide-in-top'),
   }
 
-  const onLoadingComplete = () => {
+  const onLoad = () => {
     setIsLoaded(true)
   }
 
@@ -41,7 +41,7 @@ const Image = (props) => {
       />
 
       <NextImage
-        onLoadingComplete={onLoadingComplete}
+        onLoad={onLoad}
         className={classNames(
           'md:transform-gpu md:transition-all md:duration-700',
           !isLoaded && {
